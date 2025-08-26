@@ -27,10 +27,8 @@ description: >-  # 修改为你的博客描述
 url: ""
 
 github:
-  username: github_username # change to your GitHub username
+  username: anbabna # change to your GitHub username
 
-twitter:
-  username: twitter_username # change to your Twitter username
 
 social:
   # Change to your full name.
@@ -99,7 +97,7 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:"https://p4-ad.adukwai.com/upic/2025/08/25/00/BMjAyNTA4MjUwMDQ3MzZfMTk4MzYzMDczXzE3MzMyODkyMzU1NF8yXzY=_B29338d7c09dd0c1fec403825983c6c41.jpg?tag=1-1756054113-unknown-0-ir8zxxaz5y-c4699830697d01e1&clientCacheKey=3xp9qc36fgyvj7g.jpg&bp=10000&kwai-not-alloc=35&ss=vps"  # 可以上传头像到这个路径
+avatar: "https://p4-ad.adukwai.com/upic/2025/08/25/00/BMjAyNTA4MjUwMDQ3MzZfMTk4MzYzMDczXzE3MzMyODkyMzU1NF8yXzY=_B29338d7c09dd0c1fec403825983c6c41.jpg?tag=1-1756054113-unknown-0-ir8zxxaz5y-c4699830697d01e1&clientCacheKey=3xp9qc36fgyvj7g.jpg&bp=10000&kwai-not-alloc=35&ss=vps"  # 可以上传头像到这个路径
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
