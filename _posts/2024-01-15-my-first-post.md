@@ -1,7 +1,7 @@
 ---
 title: "您的文章标题"
 date: 2024-01-15 14:30:00 +0800
-categories: [分类1, 分类2]
+categories: [后端开发, nodejs]
 tags: [标签1, 标签2, 标签3] 
 ---
 
