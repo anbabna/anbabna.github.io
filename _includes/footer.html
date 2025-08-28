@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub部署的Chirpy博客Footer配置</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            color: #2c3e50;
+        }
+        
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            flex-grow: 1;
+        }
+        
+        header {
+            background: linear-gradient(90deg, #24292e 0%, #0366d6 100%);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .content {
+            padding: 30px;
+            line-height: 1.6;
+        }
+        
+        .file-content {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 25px 0;
+            font-family: 'Fira Code', monospace;
+            line-height: 1.5;
+        }
+        
+        .file-header {
+            background: #3a3a3a;
+            padding: 8px 15px;
+            border-radius: 5px 5px 0 0;
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        
+        .copy-btn {
+            background: #0366d6;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+        
+        .code-comment {
+            color: #6272a4;
+        }
+        
+        .code-tag {
+            color: #ff79c6;
+        }
+        
+        .code-attr {
+            color: #50fa7b;
+        }
+        
+        .code-string {
+            color: #f1fa8c;
+        }
+        
+        .instructions {
+            background: #f8f9fa;
+            border-left: 4px solid #0366d6;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .step {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .step:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #0366d6;
+            font-weight: bold;
+        }
+        
+        .github-specific {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .footer-demo {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            padding: 15px 25px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+        
+        .footer-bottom {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #dee2e6;
+            color: #6c757d;
+        }
+        
+        @media (max-width: 768px) {
+            .stats {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .stat-item {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>GitHub部署的Chirpy博客Footer配置</h1>
+            <p>专为GitHub Pages优化的footer.html配置方案</p>
+        </header>
+        
+        <div class="content">
+            <div class="github-specific">
+                <h3>⚠️ GitHub Pages特别注意事项</h3>
+                <p>GitHub Pages对JavaScript有限制，需要特别注意：</p>
+                <div class="step">使用async属性加载不蒜子脚本，避免阻塞页面</div>
+                <div class="step">确保所有外部资源使用HTTPS协议</div>
+                <div class="step">GitHub Pages会自动构建Jekyll站点，无需本地构建</div>
+            </div>
+            
+            <h2>创建footer.html文件</h2>
+            <p>在您的Chirpy博客项目中，创建文件：<code>_includes/footer.html</code></p>
+            
+            <div class="instructions">
+                <h3>操作步骤：</h3>
+                <div class="step">在GitHub仓库中创建<code>_includes</code>文件夹</div>
+                <div class="step">在<code>_includes</code>文件夹中创建<code>footer.html</code>文件</div>
+                <div class="step">将以下代码复制到文件中</div>
+                <div class="step">提交更改到GitHub，等待自动部署</div>
+            </div>
+            
+            <h2>GitHub优化的footer.html内容</h2>
+            <div class="file-content">
+                <div class="file-header">
+                    <span>_includes/footer.html</span>
+                    <button class="copy-btn" onclick="copyCode()">复制代码</button>
+                </div>
+&lt;footer class="footer"&gt;
+  &lt;div class="footer__inner"&gt;
+    &lt;div class="footer__content"&gt;
+      &lt;span&gt;&amp;copy; {{ site.time | date: '%Y' }} {{ site.author.name }}&lt;/span&gt;
+      {% if site.copyright %}
+        &lt;span&gt;{{ site.copyright }}&lt;/span&gt;
+      {% endif %}
+      
+      {# GitHub Pages部署信息 #}
+      &lt;span style="display: block; margin-top: 10px; font-size: 0.9rem; color: #6c757d;"&gt;
+        &lt;i class="fab fa-github"&gt;&lt;/i&gt; 部署于GitHub Pages
+      &lt;/span&gt;
+      
+      {# 不蒜子访问统计 - 针对GitHub优化 #}
+      {% if site.busuanzi.enable %}
+      &lt;div class="busuanzi-count" style="margin-top: 15px;"&gt;
+        &lt;script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"&gt;&lt;/script&gt;
+        &lt;span id="busuanzi_container_site_pv"&gt;
+          &lt;i class="fas fa-eye"&gt;&lt;/i&gt; 访问量:&lt;span id="busuanzi_value_site_pv"&gt;&lt;/span&gt;
+        &lt;/span&gt;
+        &lt;span id="busuanzi_container_site_uv" style="margin-left: 15px;"&gt;
+          &lt;i class="fas fa-users"&gt;&lt;/i&gt; 访客数:&lt;span id="busuanzi_value_site_uv"&gt;&lt;/span&gt;
+        &lt;/span&gt;
+      &lt;/div&gt;
+      {% endif %}
+      
+      {# 页脚链接 #}
+      &lt;div class="footer-links" style="margin-top: 15px;"&gt;
+        {% if site.social.links %}
+          &lt;div class="social-links"&gt;
+            {% for link in site.social.links %}
+              &lt;a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" title="{{ link.title }}" style="margin: 0 10px; color: #0366d6;"&gt;
+                &lt;i class="{{ link.icon }}" aria-hidden="true"&gt;&lt;/i&gt;
+              &lt;/a&gt;
+            {% endfor %}
+          &lt;/div&gt;
+        {% endif %}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;
+
+{# 回到顶部按钮 #}
+&lt;button id="back-to-top" class="back-to-top" aria-label="回到顶部" style="display: none; position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; border-radius: 50%; background: #0366d6; color: white; border: none; cursor: pointer; z-index: 1000;"&gt;
+  &lt;i class="fas fa-arrow-up"&gt;&lt;/i&gt;
+&lt;/button&gt;
+
+&lt;script&gt;
+  // 回到顶部功能 - 针对GitHub优化
+  (function() {
+    var backToTop = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', function() {
+      if (window.pageYOffset > 300) {
+        backToTop.style.display = 'block';
+      } else {
+        backToTop.style.display = 'none';
+      }
+    });
+    
+    backToTop.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  })();
+&lt;/script&gt;
+            </div>
+            
+            <h2>GitHub专用的_config.yml配置</h2>
+            <div class="file-content">
+                <div class="file-header">
+                    <span>_config.yml</span>
+                </div>
+<span class="code-comment"># 站点基本设置</span>
+<span class="code-attr">title</span>: <span class="code-string">"您的博客标题"</span>
+<span class="code-attr">url</span>: <span class="code-string">"https://您的用户名.github.io"</span>
+<span class="code-attr">baseurl</span>: <span class="code-string">"{{ site.baseurl }}"</span>
+<span class="code-attr">timezone</span>: <span class="code-string">"Asia/Shanghai"</span>
+
+<span class="code-comment"># 作者信息</span>
+<span class="code-attr">author</span>:
+  <span class="code-attr">name</span>: <span class="code-string">"您的姓名"</span>
+  <span class="code-attr">email</span>: <span class="code-string">"您的邮箱"</span>
+  <span class="code-attr">github</span>: <span class="code-string">"您的GitHub用户名"</span>
+
+<span class="code-comment"># 不蒜子统计配置</span>
+<span class="code-attr">busuanzi</span>:
+  <span class="code-attr">enable</span>: <span class="code-tag">true</span>
+  <span class="code-attr">site_uv</span>: <span class="code-tag">true</span>
+  <span class="code-attr">site_pv</span>: <span class="code-tag">true</span>
+  <span class="code-attr">page_pv</span>: <span class="code-tag">true</span>
+
+<span class="code-comment"># 社交链接</span>
+<span class="code-attr">social</span>:
+  <span class="code-attr">links</span>:
+    - <span class="code-attr">url</span>: <span class="code-string">"https://github.com/您的用户名"</span>
+      <span class="code-attr">icon</span>: <span class="code-string">"fab fa-github"</span>
+      <span class="code-attr">title</span>: <span class="code-string">"GitHub"</span>
+    - <span class="code-attr">url</span>: <span class="code-string">"mailto:您的邮箱"</span>
+      <span class="code-attr">icon</span>: <span class="code-string">"fas fa-envelope"</span>
+      <span class="code-attr">title</span>: <span class="code-string">"Email"</span>
+
+<span class="code-comment"># GitHub Pages构建设置</span>
+<span class="code-attr">remote_theme</span>: <span class="code-string">"cotes2020/jekyll-theme-chirpy"</span>
+<span class="code-attr">plugins</span>:
+  - <span class="code-string">"jekyll-paginate"</span>
+  - <span class="code-string">"jekyll-sitemap"</span>
+  - <span class="code-string">"jekyll-seo-tag"</span>
+  - <span class="code-string">"jekyll-feed"</span>
+            </div>
+
+            <h2>GitHub工作流程</h2>
+            <div class="instructions">
+                <div class="step">1. 在GitHub仓库中创建或更新文件</div>
+                <div class="step">2. 提交更改到main分支</div>
+                <div class="step">3. GitHub Actions会自动构建和部署</div>
+                <div class="step">4. 访问 https://您的用户名.github.io 查看效果</div>
+                <div class="step">5. 如果使用自定义域名，需要在仓库Settings中配置</div>
+            </div>
+            
+            <h2>效果演示</h2>
+            <div class="footer-demo">
+                <div class="stats">
+                    <div class="stat-item">
+                        <i class="fab fa-github"></i>
+                        <div>部署于GitHub Pages</div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-eye"></i>
+                        <div>访问量: <strong>1,234</strong></div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <div>访客数: <strong>567</strong></div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy; 2023 您的姓名</p>
+                    <div style="margin-top: 10px;">
+                        <a href="https://github.com/您的用户名" style="margin: 0 10px; color: #0366d6;"><i class="fab fa-github"></i></a>
+                        <a href="mailto:您的邮箱" style="margin: 0 10px; color: #0366d6;"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function copyCode() {
+            const code = document.querySelector('.file-content').innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                btn.textContent = '已复制!';
+                setTimeout(() => {
+                    btn.textContent = '复制代码';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
