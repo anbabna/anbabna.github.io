@@ -72,6 +72,12 @@ analytics:
     id: # fill in your Cloudflare Web Analytics token
   fathom:
     id: # fill in your Fathom Site ID
+# Busuanzi统计配置（新增）
+busuanzi:
+  enable: true
+  site_uv: true    # 站点访客数
+  site_pv: true    # 站点总访问量  
+  page_pv: true    # 页面阅读量
 
 # Page views settings
 pageviews:
