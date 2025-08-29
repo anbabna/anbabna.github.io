@@ -122,12 +122,7 @@ comments:
     theme: "preferred_color_scheme"  # 跟随系统主题
     lang: "zh-CN"
     crossorigin: "anonymous"
-# 不蒜子统计配置
-busuanzi:
-  enable: true
-  site_uv: true
-  site_pv: true
-  page_pv: true
+
 # Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
 assets:
   self_host:
