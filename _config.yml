@@ -1,5 +1,9 @@
 # The Site Configuration
-
+# 在_config.yml文件中添加以下配置
+favicon: https://p4-ad.adukwai.com/upic/2025/08/25/00/BMjAyNTA4MjUwMDQ3MzZfMTk4MzYzMDczXzE3MzMyODkyMzU1NF8yXzY=_B29338d7c09dd0c1fec403825983c6c41.jpg?tag=1-1756054113-unknown-0-ir8zxxaz5y-c4699830697d01e1&clientCacheKey=3xp9qc36fgyvj7g.jpg&bp=10000&kwai-not-alloc=35&ss=vps
+apple_touch_icon: https://p4-ad.adukwai.com/upic/2025/08/25/00/BMjAyNTA4MjUwMDQ3MzZfMTk4MzYzMDczXzE3MzMyODkyMzU1NF8yXzY=_B29338d7c09dd0c1fec403825983c6c41.jpg?tag=1-1756054113-unknown-0-ir8zxxaz5y-c4699830697d01e1&clientCacheKey=3xp9qc36fgyvj7g.jpg&bp=10000&kwai-not-alloc=35&ss=vps
+# 网站图标
+site_icon: https://p4-ad.adukwai.com/upic/2025/08/25/00/BMjAyNTA4MjUwMDQ3MzZfMTk4MzYzMDczXzE3MzMyODkyMzU1NF8yXzY=_B29338d7c09dd0c1fec403825983c6c41.jpg?tag=1-1756054113-unknown-0-ir8zxxaz5y-c4699830697d01e1&clientCacheKey=3xp9qc36fgyvj7g.jpg&bp=10000&kwai-not-alloc=35&ss=vps
 # Import the theme
 theme: jekyll-theme-chirpy
 
@@ -89,7 +93,8 @@ pageviews:
 # and there will be a toggle to switch the theme between dark and light
 # on the bottom left of the sidebar.
 #
-# Available options:
+# Available options:换成自己的
+
 #
 #     light — Use the light color scheme
 #     dark — Use the dark color scheme
