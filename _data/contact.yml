@@ -5,6 +5,9 @@
 
 #- type: twitter
 #  icon: "fa-brands fa-x-twitter"
+- type: bilibili
+  icon: "ri-bilibili-line"  # Remix Icon的哔哩哔哩图标
+  url: "https://space.bilibili.com/1752418312"
 
 - type: email
   icon: "fas fa-envelope"
