@@ -2,6 +2,7 @@
 .bundle
 vendor
 Gemfile.lock
+jekyll-theme-chirpy-master
 
 # Jekyll cache
 .jekyll-cache
