@@ -30,6 +30,15 @@ url: "https://blog.yellowming.cn"
 github:
   username: anbabna # change to your GitHub username
 
+# 添加关键字配置
+keywords: 
+  - 黄泽明
+  - 技术博客 
+  - Git教程
+  - VS Code配置
+  - 编程开发
+  - 技术文章
+  - 学习笔记
 
 social:
   # Change to your full name.
